@@ -1,9 +1,6 @@
 pipeline {
     agent any
-    tools {
-        maven 'Maven_3.9'
-        jdk 'JDK_17'
-    }
+   
     stages {
         stage('Checkout') { steps { checkout scm } }
         stage('Build') { steps { sh 'mvn clean package' } }
